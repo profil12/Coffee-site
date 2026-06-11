@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>AROMA | Контакты</title>
+    <link rel="stylesheet" href="C:\Users\Admin\Desktop\тзшки\кофейня\style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <div class="logo">
+                <span class="logo__icon">☕</span>
+                <span class="logo__text">AROMA</span>
+            </div>
+            <button class="burger" id="burgerBtn" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav" id="navMenu">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Главная</a></li>
+                    <li><a href="menu.html" class="nav__link">Меню</a></li>
+                    <li><a href="about.html" class="nav__link">О нас</a></li>
+                    <li><a href="contacts.html" class="nav__link active">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1 id="booking">Забронировать столик</h1>
+                <p>Будем рады гостям каждый день</p>
+            </div>
+        </section>
+
+        <section class="contacts-main">
+            <div class="container">
+                <div class="contacts-grid">
+                    <div class="contacts-info">
+                        <h3>Контакты</h3>
+                        <p>📍 ул. Кофейная, 15, Москва</p>
+                        <p>📞 +7 (999) 123-45-67</p>
+                        <p>✉️ hello@aroma.cafe</p>
+                        <p>🕒 Пн–Вс: 08:00 – 22:00</p>
+                    </div>
+                    <div class="contacts-form">
+                        <h3>Напишите нам</h3>
+                        <form id="feedbackForm">
+                            <input type="text" id="name" placeholder="Ваше имя" required>
+                            <input type="email" id="email" placeholder="Email" required>
+                            <textarea id="message" placeholder="Сообщение" rows="4" required></textarea>
+                            <button type="submit" class="btn btn--primary">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="map-placeholder">
+                    <h3>Как нас найти</h3>
+                    <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae7c0c6c8d0d9f2e6a8b3f5d1c4e7a9f2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8&source=constructor" width="100%" height="300" frameborder="0" style="border-radius: 24px; border: 1px solid #d4b88c;"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <p>© 2026 AROMA — Кофейная культура в каждом глотке.</p>
+        </div>
+    </footer>
+
+    <script src="C:\Users\Admin\Desktop\тзшки\кофейня\script.js"></script>
+</body>
+</html>

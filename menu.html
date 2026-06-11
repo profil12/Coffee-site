@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>AROMA | Меню</title>
+    <link rel="stylesheet" href="C:\Users\Admin\Desktop\тзшки\кофейня\style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container header__container">
+            <div class="logo">
+                <span class="logo__icon">☕</span>
+                <span class="logo__text">AROMA</span>
+            </div>
+            <button class="burger" id="burgerBtn" aria-label="Меню">
+                <span></span><span></span><span></span>
+            </button>
+            <nav class="nav" id="navMenu">
+                <ul class="nav__list">
+                    <li><a href="index.html" class="nav__link">Главная</a></li>
+                    <li><a href="menu.html" class="nav__link active">Меню</a></li>
+                    <li><a href="about.html" class="nav__link">О нас</a></li>
+                    <li><a href="contacts.html" class="nav__link">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <div class="container">
+                <h1>Наше меню</h1>
+                <p>Нажми на любой товар — и оформи заказ 😉</p>
+            </div>
+        </section>
+
+        <section class="menu-filter">
+            <div class="container">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">Все</button>
+                    <button class="filter-btn" data-filter="coffee">Кофе</button>
+                    <button class="filter-btn" data-filter="dessert">Десерты</button>
+                    <button class="filter-btn" data-filter="tea">Чай</button>
+                </div>
+                <div class="menu-grid" id="menuGrid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__container">
+            <p>© 2026 AROMA — Кофейная культура в каждом глотке.</p>
+        </div>
+    </footer>
+
+    <!-- Модальное окно оформления заказа -->
+    <div id="orderModal" class="order-modal">
+        <div class="order-modal-content">
+            <div class="order-modal-header">
+                <h2>☕ Оформление заказа</h2>
+                <button class="close-order" id="closeOrderBtn">&times;</button>
+            </div>
+            <div id="orderFormContainer">
+                <form id="orderForm">
+                    <input type="hidden" id="orderProductName" value="">
+                    <input type="hidden" id="orderProductPrice" value="">
+                    
+                    <div class="form-group">
+                        <label>Товар:</label>
+                        <p id="selectedProductDisplay" style="font-weight: bold; color: #E5A443;"></p>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Количество:</label>
+                        <input type="number" id="orderQuantity" min="1" value="1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Ваше имя:</label>
+                        <input type="text" id="customerName" placeholder="Введите ваше имя" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Телефон:</label>
+                        <input type="tel" id="customerPhone" placeholder="+7 (___) ___-__-__" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Способ получения:</label>
+                        <select id="deliveryMethod">
+                            <option value="pickup">Самовывоз (бесплатно)</option>
+                            <option value="delivery">Доставка (+200 ₽)</option>
+                        </select>
+                    </div>
+                    
+                    <div id="totalPrice" class="total-price"></div>
+                    
+                    <button type="submit" class="btn btn--primary pay-btn">💳 Оплатить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно чека -->
+    <div id="receiptModal" class="receipt-modal">
+        <div class="receipt-modal-content">
+            <div class="receipt-header">
+                <h2>🧾 ЧЕК ОПЛАТЫ</h2>
+                <button class="close-receipt" id="closeReceiptBtn">&times;</button>
+            </div>
+            <div class="receipt-body" id="receiptBody">
+                <!-- сюда подставится чек -->
+            </div>
+            <button class="btn btn--primary" id="printReceiptBtn">🖨️ Распечатать чек</button>
+        </div>
+    </div>
+
+    <script src="C:\Users\Admin\Desktop\тзшки\кофейня\script.js"></script>
+</body>
+</html>
